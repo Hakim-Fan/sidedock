@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>SideDock - 官方文档与支持</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 引入现代清爽主题 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #1E40AF;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">正在加载文档...</div>
+  <script>
+    window.$docsify = {
+      name: 'SideDock',
+      repo: 'https://github.com/Hakim-Fan/sidedock',
+      auto2top: true,
+      homepage: 'README.md' // 自动加载并渲染 README.md
+    }
+  </script>
+  <!-- Docsify 核心脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+</body>
+</html>
