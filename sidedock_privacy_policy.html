@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Privacy Policy for SideDock macOS application.">
+    <title>Privacy Policy - SideDock</title>
+    <style>
+        :root {
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border-color: #e2e8f0;
+            --divider-color: #cbd5e0;
+            --header-gradient: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #4f46e5 100%);
+            --header-text: #ffffff;
+            --badge-bg: #2563eb;
+            --badge-text: #ffffff;
+            --list-marker: #2563eb;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --footer-text: #a0aec0;
+            --code-bg: #edf2f7;
+            --code-text: #2d3748;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0b1120;
+                --card-bg: #1e293b;
+                --text-primary: #f1f5f9;
+                --text-secondary: #cbd5e1;
+                --border-color: #334155;
+                --divider-color: #475569;
+                --header-gradient: linear-gradient(135deg, #0369a1 0%, #1e40af 50%, #3730a3 100%);
+                --header-text: #f8fafc;
+                --badge-bg: #38bdf8;
+                --badge-text: #0f172a;
+                --list-marker: #38bdf8;
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                --footer-text: #64748b;
+                --code-bg: #334155;
+                --code-text: #e2e8f0;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            background: var(--header-gradient);
+            color: var(--header-text);
+            padding: 50px 40px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .dates {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* 语言切换按钮 */
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-1px);
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            border-radius: 0 0 12px 12px;
+            box-shadow: var(--shadow);
+            padding: 44px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h3 .num {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .highlight-box {
+            background: var(--bg-color);
+            border-left: 4px solid var(--badge-bg);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .divider {
+            border: 0;
+            height: 1px;
+            background: var(--divider-color);
+            margin: 30px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--footer-text);
+            font-size: 13px;
+        }
+
+        .footer p {
+            margin-bottom: 6px;
+        }
+
+        /* 纯前端语言控制 */
+        body.lang-zh .lang-en-content {
+            display: none !important;
+        }
+
+        body.lang-en .lang-zh-content {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="lang-en">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">中文</button>
+            <div class="lang-en-content">
+                <h1>SideDock</h1>
+                <h2>Privacy Policy</h2>
+                <div class="dates">
+                    <p><b>Effective Date</b>: January 1, 2026</p>
+                    <p><b>Last Updated</b>: September 22, 2026</p>
+                </div>
+            </div>
+            <div class="lang-zh-content">
+                <h1>SideDock</h1>
+                <h2>隐私政策</h2>
+                <div class="dates">
+                    <p><b>生效日期</b>：2026 年 1 月 1 日</p>
+                    <p><b>最近更新</b>：2026 年 9 月 22 日</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-box">
+
+            <!-- 1. Overview & Core Philosophy -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">1</span>Overview & Core Philosophy</h3>
+                        <p>Welcome to <b>SideDock</b> ("we", "our", or "the App"), developed and maintained by <b>SideDock Team</b>. SideDock is a dedicated, lightweight slide-over desktop sidebar browser and multi-workspace utility engineered exclusively for macOS.</p>
+                        <p>We deeply respect and prioritize user privacy. SideDock is built upon two core principles: <b>"Offline/Local-First"</b> and <b>"Zero Telemetry"</b>. We do not operate user accounts, cloud tracking infrastructure, or centralized analytics databases. Your privacy remains in your complete control.</p>
+                        <div class="highlight-box">
+                            <p><b>Summary of Core Commitments:</b></p>
+                            <p>• Zero Telemetry: No behavioral tracking, user profiling, or third-party analytics SDKs.</p>
+                            <p>• Local Sandbox: All configuration, workspaces, cookies, and caches are retained strictly on your local Mac.</p>
+                            <p>• Direct Web Access: Web sessions communicate directly between your device and target websites without intermediate proxy servers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">一</span>概述与核心隐私准则</h3>
+                        <p>欢迎使用 <b>SideDock</b>（以下简称“本应用”或“我们”）。本应用由 <b>SideDock团队</b> 开发与维护，是一款专为 macOS 系统打造的轻量高效边缘抽屉式侧边栏浏览器与多工作区多任务辅助工具。</p>
+                        <p>我们高度重视并深知个人信息及数据安全的重要性。SideDock 从架构立项之初即恪守两大核心设计原则：<b>“本地优先（Local-First）”</b>与<b>“零遥测埋点（Zero Telemetry）”</b>。我们不设立用户账号系统、不部署云端用户行为追踪集群，您的数据完全属于您自己。</p>
+                        <div class="highlight-box">
+                            <p><b>核心承诺速览：</b></p>
+                            <p>• 零数据收集：无任何用户行为埋点、画像分析或第三方追踪统计 SDK。</p>
+                            <p>• 本地沙盒保护：所有工作区配置、网页缓存、Cookie 均严格保存在您的 Mac 本地沙盒中。</p>
+                            <p>• 直连访问：内置浏览器发起的所有网络请求均由本机直接与目标网站服务器通信，无中转代理服务器。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 2. Data We Do NOT Collect -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">2</span>Data We Do NOT Collect</h3>
+                        <p>To ensure total transparency, we explicitly declare that SideDock does not collect or upload any of the following data:</p>
+                        <ul>
+                            <li><b>Personal Identifiable Information (PII)</b>: We do not require account registration, login credentials, phone numbers, email addresses, or real-name verifications.</li>
+                            <li><b>Browsing Content & Web Input</b>: We do not monitor, log, or transmit URLs you visit, web forms you fill out, passwords you enter, or search keywords you type in SideDock.</li>
+                            <li><b>Device Fingerprinting & Telemetry</b>: We do not gather hardware serial numbers, unique advertising identifiers (IDFA), MAC addresses, or granular location information.</li>
+                            <li><b>Web Cookies & Local Storage</b>: We never read, harvest, or synchronize cookies, tokens, or session storage generated while interacting with websites inside SideDock.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">二</span>我们不收集的信息</h3>
+                        <p>为向您提供透明、可信的使用环境，我们在此郑重明示，SideDock 绝对不会收集、存储或上传以下任何信息：</p>
+                        <ul>
+                            <li><b>个人身份识别信息</b>：应用无需注册登录，我们不收集您的姓名、电话号码、电子邮箱或任何实名信息。</li>
+                            <li><b>网页浏览内容与输入数据</b>：我们不会监控、记录或上传您在 SideDock 中访问的任何网页 URL、表单输入、登录凭据或搜索关键字。</li>
+                            <li><b>设备指纹与行为追踪</b>：我们不采集设备硬件序列号、广告标识符（IDFA）、MAC 地址或精准地理位置。</li>
+                            <li><b>Cookies 与本地会话凭据</b>：我们绝不收集、窃取或分析您在浏览第三方网页时产生的 Cookie、会话令牌或 LocalStorage 数据。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 3. Local Data Storage & Sandbox Mechanism -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">3</span>Local Data Storage & Security</h3>
+                        <p>Any configuration and runtime data necessary for SideDock to operate are stored exclusively within the macOS isolated application sandbox on your local disk:</p>
+                        <ul>
+                            <li><b>Workspaces & Tab Configurations</b>: Your saved workspace titles, URLs, custom icons, and order are stored in a local JSON document within the app sandbox directory.</li>
+                            <li><b>Application Preferences</b>: User choices such as global shortcuts, background tab sleep intervals, deep sleep timeouts, proxy server settings, and language preferences are stored locally via macOS <code>NSUserDefaults</code>.</li>
+                            <li><b>WebKit Sandbox Data</b>: The embedded browser uses Apple's native <code>WKWebView</code>. Cached files, web databases, and cookies are maintained in Apple's designated local container and isolated by standard macOS App Sandbox security boundaries.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">三</span>本地数据存储与沙盒机制</h3>
+                        <p>SideDock 运行所需的所有基础配置及临时数据均完整存储于您本地设备的 macOS 应用隔离沙盒中：</p>
+                        <ul>
+                            <li><b>工作区与标签页配置</b>：您添加的侧边栏网站名称、目标 URL、自定义图标与排序，均保存在本地沙盒专用的 JSON 配置文件中。</li>
+                            <li><b>偏好设置选项</b>：包括全局呼出快捷键、后台标签自动休眠时长、窗口深睡释放时长、代理服务器配置以及界面语言选择，均保存在本机的 <code>NSUserDefaults</code> 中。</li>
+                            <li><b>WebKit 容器数据</b>：内置浏览器基于 Apple 原生 <code>WKWebView</code> 构建，网页产生的缓存文件、Cookie 与网络数据由 macOS 官方沙盒安全隔离机制保护，其他未授权应用无法跨界访问。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 4. Third-Party Websites & External Services -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">4</span>Third-Party Websites & Network Interactions</h3>
+                        <p>SideDock serves as a multi-workspace web shell container. When you open websites (such as Notion, ChatGPT, GitHub, Slack, or web mail):</p>
+                        <ul>
+                            <li><b>Direct Network Requests</b>: Network traffic flows directly between your computer and the remote servers of those third-party websites. SideDock neither proxies nor intercepts your web traffic.</li>
+                            <li><b>Third-Party Policies</b>: Your interactions with any third-party website are governed by the respective website's Privacy Policy and Terms of Service. We encourage you to review their policies when submitting personal or confidential data.</li>
+                            <li><b>Search Engine Integration</b>: When you submit a query through the New Tab address bar, your query is transmitted directly to the search provider you have chosen (e.g., Google, Baidu, Bing).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">四</span>第三方网站与网络交互说明</h3>
+                        <p>SideDock 作为多工作区小窗与侧边栏容器，当您在其中打开各类第三方网页服务时：</p>
+                        <ul>
+                            <li><b>网络通信直连</b>：网络流量直接在您的计算机与目标网站服务器之间建立连接，SideDock 不设立中转服务器，亦不劫持或解密您的网络通信。</li>
+                            <li><b>第三方隐私条款</b>：您在各个具体网站上的登录、交互及数据提交，均受该网站自身的《隐私协议》与《服务条款》管辖。建议您在访问第三方服务时审慎阅读其政策。</li>
+                            <li><b>快捷搜索引擎调用</b>：当您在原生 New Tab 起始页的搜索栏中输入搜索内容并回车时，关键词将直接重定向至您当前选定的搜索引擎（如 Google、百度或 Bing）。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 5. User Control & Data Erasure -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">5</span>User Control & Data Erasure</h3>
+                        <p>You retain absolute sovereignty over your local data. SideDock provides full built-in capabilities to inspect, erase, or reset application assets at any time:</p>
+                        <ul>
+                            <li><b>Clear Web Cache & Cookies</b>: Navigate to <b>Preferences -> Privacy -> Clear Web Cache</b> to instantly wipe all cookies, cached files, and close running web processes.</li>
+                            <li><b>Reset All Application Data</b>: In <b>Preferences -> Privacy -> Reset App</b>, you can wipe all saved workspaces, preferences, and reset the app to its factory initial state.</li>
+                            <li><b>Complete Removal</b>: Moving SideDock to the macOS Trash and emptying it will permanently remove the application binary. Deleting its sandbox container directory removes every remaining trace from your Mac.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">五</span>用户控制权与数据清除</h3>
+                        <p>您对存储于本地的全部数据拥有最高控制权与处分权。SideDock 提供了极简且彻底的数据管理与擦除机制：</p>
+                        <ul>
+                            <li><b>清理 Web 缓存与 Cookie</b>：在应用内进入<b>「偏好设置 - 隐私 - 清理 Web 缓存」</b>，可随时一键彻底清空所有网页生成的 Cookie、离线缓存并释放进程。</li>
+                            <li><b>一键重置应用数据</b>：在<b>「偏好设置 - 隐私 - 重置应用」</b>中，可一键清空全部保存的工作区网址、历史记录并恢复出厂默认配置。</li>
+                            <li><b>彻底卸载与抹除</b>：将 SideDock 移至废纸篓并清倒，即可彻底删除应用程序；清理沙盒容器目录即可移除本机全部残留数据，无需担心云端遗留任何痕迹。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 6. Protection of Minors -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">6</span>Protection of Minors</h3>
+                        <p>SideDock is a general-purpose desktop productivity and multitasking utility. We do not knowingly solicit or collect personal information from minors under the age of 14 (or the legal age of majority in your jurisdiction). Minors should only use this App under the guidance and permission of a parent or legal guardian.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">六</span>未成年人保护</h3>
+                        <p>SideDock 是一款通用的桌面端效率与多任务工作区工具。我们不会故意向未成年人索取或收集任何个人信息。若您为未成年人，请在法定监护人的陪同、指导与同意下合理使用本应用及相关互联网服务。</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 7. Amendments to This Policy -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">7</span>Amendments to This Policy</h3>
+                        <p>We may amend this Privacy Policy periodically to reflect app enhancements, architectural adjustments, or evolving regulatory standards. Any modifications will be published on the official application store page or included in release notes. Your continued use of SideDock following any amendment signifies your acceptance of the updated policy.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">七</span>隐私政策的修订与通知</h3>
+                        <p>随着产品功能迭代、技术架构调整或法律法规演进，我们可能会适时更新本协议。更新后的内容将通过版本更新日志、应用内公告或官方应用商店页面向用户公示。若您在条款更新后继续使用本应用，即表示您理解并同意修订后的隐私政策条款。</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 8. Contact & Feedback -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">8</span>Contact & Feedback</h3>
+                        <p>If you have questions, suggestions, or compliance inquiries regarding this Privacy Policy or data privacy in SideDock, please reach out via our community channels:</p>
+                        <ul>
+                            <li><b>Developer</b>: SideDock Team (SideDock团队)</li>
+                            <li><b>GitHub Issues & Community</b>: <a href="https://github.com/Hakim-Fan/slidepad-mac/issues" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/Hakim-Fan/slidepad-mac/issues</a></li>
+                            <li><b>In-App Support</b>: In-app "Preferences -> About & Feedback"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">八</span>联系我们与意见反馈</h3>
+                        <p>如果您对本隐私政策有任何疑问、建议或合规事宜咨询，欢迎随时通过以下渠道与我们取得联系：</p>
+                        <ul>
+                            <li><b>开发团队</b>：SideDock团队 (SideDock Team)</li>
+                            <li><b>GitHub 反馈与讨论区</b>：<a href="https://github.com/Hakim-Fan/slidepad-mac/issues" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/Hakim-Fan/slidepad-mac/issues</a></li>
+                            <li><b>应用内支持</b>：在应用内进入「偏好设置 - 关于与意见反馈」</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="lang-en-content">
+                    <p><b>SideDock</b> &copy; 2026 SideDock Team. All rights reserved.</p>
+                </div>
+                <div class="lang-zh-content">
+                    <p><b>SideDock</b> &copy; 2026 SideDock团队 保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function detectPreferredLanguage() {
+            var params = new URLSearchParams(window.location.search);
+            var langParam = params.get('lang');
+            if (langParam === 'zh' || langParam === 'en') {
+                return langParam;
+            }
+
+            var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (browserLang.startsWith('zh')) {
+                return 'zh';
+            }
+            return 'en';
+        }
+
+        function setLanguage(lang) {
+            var isZh = (lang === 'zh');
+            document.body.className = isZh ? 'lang-zh' : 'lang-en';
+            document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+            document.title = isZh ? '隐私政策 - SideDock' : 'Privacy Policy - SideDock';
+
+            var btn = document.getElementById('langToggle');
+            if (btn) {
+                btn.textContent = isZh ? 'English' : '中文';
+            }
+
+            var newUrl = new URL(window.location.href);
+            if (isZh) {
+                newUrl.searchParams.set('lang', 'zh');
+            } else {
+                newUrl.searchParams.set('lang', 'en');
+            }
+            window.history.replaceState({}, '', newUrl.toString());
+        }
+
+        function toggleLanguage() {
+            var isCurrentlyZh = document.body.classList.contains('lang-zh');
+            setLanguage(isCurrentlyZh ? 'en' : 'zh');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var initialLang = detectPreferredLanguage();
+            setLanguage(initialLang);
+        });
+    </script>
+</body>
+
+</html>
